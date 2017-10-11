@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int brinary(void)
+int brinary(void)/*print the bra-form*/
 {
 	printf("00000000	NUL   00000001	SOH   00000010	STX   00000011	ETX   00000100	EOT   00000101	ENQ   00000110	ACK   00000111	BEL\n");
 	printf("00001000	BS    00001001	HT    00001010	LF    00001011	VT    00001100	FF    00001101	CR    00001110	SO    00001111	SI\n");
@@ -22,7 +22,7 @@ int brinary(void)
 	return 0;
 }
 
-int octal(void)
+int octal(void)/*print the oct-form*/
 {
 	printf("0	NUL   1  SOH   2  STX   3  ETX   4 EOT   5 ENQ   6 ACK   7 BEL\n");
 	printf("10	BS    11 HT    12 LF    13 VT    14	FF   15	CR   16	SO   17	SI\n");
@@ -44,7 +44,7 @@ int octal(void)
 	return 0;
 }
 
-int decimal(void)
+int decimal(void)/*print the dec-form*/
 {
 	printf("0 NUL   1 SOH   2 STX   3 ETX   4 EOT   5 ENQ   6 ACK   7 BEL\n");
 	printf("8 BS    9 HT    10	LF  11	VT  12	FF  13	CR  14	SO  15	SI\n");
@@ -67,7 +67,7 @@ int decimal(void)
 	return 0;
 }
 
-int hexadecimal(void)
+int hexadecimal(void)/*print the hex form*/
 {
 	printf("0	NUL   1	SOH   2	STX   3	ETX   4	EOT   5	ENQ   6 ACK   7 BEL\n");
 	printf("8	BS    9	HT    0A LF   0B VT   0C FF   0D CR   0E SO   0F SI\n");
@@ -90,7 +90,7 @@ int hexadecimal(void)
 	return 0;
 }
 
-int help(void)
+int help(void)/*print the help*/
 {
 	printf("input the string to search ascii form:\n");
 	printf("brinary:    ascii -b");
@@ -99,7 +99,7 @@ int help(void)
 	printf("hexadecimal:ascii -h");
 }
 
-int main(int argc,char *argv[])
+int main(int argc,char *argv[])/*use the cmd-commend to receive input*/
 {
 	if(argc==1)
 	{
