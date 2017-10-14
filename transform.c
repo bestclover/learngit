@@ -13,24 +13,79 @@ int main(void)
 	printf("input the mumber you want to transform:");
 	scanf("%d",&number);
 	printf("\n");
-		
-	while(number>0)
+	
+	if(divisor<=10)
 	{
-		remainder=number%divisor;
-		number=number/divisor;
-		rem_container[i]=remainder;
-		i++;
-	}
+		    while(number>0)
+	    { 
+		    remainder=number%divisor;
+		    number=number/divisor;
+		    rem_container[i]=remainder;
+		    i++;
+	    }
 	
-	while(i>=0)
+	        while(i>=0)
+	    {
+		    printf("%d",rem_container[i]);
+		    i--;
+	    }
+	
+	    printf("\n"); 
+	    main();
+	    getchar();
+	}
+	else if(divisor>10&&divisor<=16)
 	{
-		printf("%d",rem_container[i]);
-		i--;
+		    while(number>0)
+	    {
+		    remainder=number%divisor;
+		    number=number/divisor;
+		    rem_container[i]=remainder;
+		    i++;
+	    }
+	
+		    while(i>=0)
+	    {
+		    if(rem_container[i]<10)
+		    {
+			    printf("%d",rem_container[i]);
+		        i--;
+		    }
+		    else
+		    {
+			    switch(rem_container[i])
+			    {
+				    case 10:printf("A");
+				    i--;
+			        break;
+			        case 11:printf("B");
+			        i--;
+			        break;
+			        case 12:printf("C");
+			        i--;
+			        break;
+			        case 13:printf("D");
+			        i--;
+			        break;
+			        case 14:printf("E");
+			        i--;
+			        break;
+			        case 15:printf("F");
+			        i--;
+			        break;
+			        default:
+			        break;
+			    }
+		    }
+		main();
+	    }
 	}
-	
-	printf("\n"); 
-	main();
-	getchar();
-	
-	return 0;
- } 
+	else
+	{
+		printf("can't apply more!'");
+	}
+
+	 return 0;
+ }
+ 
+ 
